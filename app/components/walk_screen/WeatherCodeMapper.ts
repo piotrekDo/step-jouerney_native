@@ -1,0 +1,53 @@
+const SUNNY = require('../../assets/sunny.png');
+const PART_CLOUD = require('../../assets/part_cloud.png');
+const CLOUDY =  require('../../assets/cloudy.png');
+const DRIZZLE =  require('../../assets/drizzle.png');
+const RAIN= require('../../assets/rain.png');
+const STORM  =  require('../../assets/storm.png');
+
+export const imageUrlByCodes = new Map<number, string>([
+    [0, SUNNY],
+    [1, SUNNY],
+    [2, PART_CLOUD],
+    [3, CLOUDY],
+    [51, DRIZZLE],
+    [52, DRIZZLE],
+    [52, DRIZZLE],
+    [54, DRIZZLE],
+    [55, DRIZZLE],
+    [56, DRIZZLE],
+    [57, DRIZZLE],
+    [58, DRIZZLE],
+    [59, DRIZZLE],
+    [60, RAIN],
+    [61, RAIN],
+    [62, RAIN],
+    [63, RAIN],
+    [64, RAIN],
+    [65, RAIN],
+    [66, RAIN],
+    [67, RAIN],
+    [68, RAIN],
+    [69, RAIN],
+    [80, STORM],
+    [81, STORM],
+    [82, STORM],
+    [82, STORM],
+    [83, STORM],
+    [84, STORM],
+    [85, STORM],
+    [86, STORM],
+    [87, STORM],
+    [88, STORM],
+    [89, STORM],
+    [90, STORM],
+    [91, STORM],
+    [92, STORM],
+    [93, STORM],
+    [94, STORM],
+    [95, STORM],
+    [96, STORM],
+    [97, STORM],
+    [98, STORM],
+    [99, STORM],
+])
