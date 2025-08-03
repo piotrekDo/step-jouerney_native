@@ -2,7 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import colors from '../config/colors';
-import { WelcomScreen } from '../screens/WelcomScreen';
+import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { NewWalkButton } from './NewWalkButton';
 import routes from './routes';
 import WalkNavigator from './WalkNavigator';
@@ -14,7 +14,7 @@ const AppNavigator = () => (
     <Tab.Navigator>
       <Tab.Screen
         name={routes.WELCOME}
-        component={WelcomScreen}
+        component={WelcomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='home' color={color} size={size} />,
@@ -35,7 +35,7 @@ const AppNavigator = () => (
       />
       <Tab.Screen
         name={routes.ACCOUNT}
-        component={WelcomScreen}
+        component={WelcomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='account' color={color} size={size} />,

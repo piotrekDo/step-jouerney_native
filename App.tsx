@@ -8,17 +8,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from './app/navigation/AppNavigator';
 import navigationTheme from './app/navigation/navigationTheme';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AuthNavigator from './app/navigation/AuthNavigator';
+import useAuth from './app/auth/useAuth';
 
 const queryClient = new QueryClient();
 
 export default function App() {
   const netinfo = useNetInfo();
+  const { user } = useAuth();
   useLocationPermission();
 
   return (
     <QueryClientProvider client={queryClient}>
       <NavigationContainer theme={navigationTheme}>
-        <AppNavigator />
+        {!user ? <AuthNavigator /> : <AppNavigator />}
         <StatusBar style='light' />
       </NavigationContainer>
     </QueryClientProvider>
